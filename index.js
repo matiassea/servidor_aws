@@ -11,18 +11,19 @@ function logger(req,res,next){
 
 //configuracion
 app.all('/user',(req,res,next)=>{
-    console.log('por aqui paso')
+    console.log('por aqui paso y se fue')
     next();
 })
 app.use(logger);
 
 
 app.get('/user', (req,res) => {
-res.json({
-    username:"Gabiel",
-    lastname:"Ael"
+    res.send('<h1>Get requested<h1>');
+//res.json({
+//    username:"Gabiel",
+ //   lastname:"Ael"
 
-});
+//});
 });
 
 //Rutas dinamicas
